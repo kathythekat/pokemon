@@ -32,12 +32,12 @@ async function handleClick() {
     if (response.data.cards && response.data.cards[0] && response.data.cards[0].image) {
       let cardImageUrl = response.data.cards[0].image;
       showCard(cardImageUrl);
-    } else {
-      debugger;
+    }
+    if (response.data.remaining === 0) {
+      alert('No more cards!');
     }
   } catch(e) {
-    debugger;
-      if (response.data.cards === 500) {
+      if (e.response.status === 500) {
         alert('No more cards!')
       }
     }
@@ -46,6 +46,5 @@ async function handleClick() {
 function showCard(url) {
   $('#card-div').append(`<img class='card-img' src=${url}>`);
 }
-
 
 setUp()
