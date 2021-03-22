@@ -1,0 +1,9 @@
+#card-div {
+  width: 226px;
+  height: 314px;
+  position: relative;
+}
+
+.card-img {
+  position: absolute;
+}
