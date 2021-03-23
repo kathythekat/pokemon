@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+    <title>Pokemon</title>
   </head>
   <body>
-    <button class="generate-pokemon">Gotta Catch Em All!</button>
-    <div class="container"></div>
+    <div class="container">
+      <button type="button" class="btn btn-warning generate-pokemon">Gotta Catch Em All!</button>
+      <div id="card-container" class="row"></div>
+    </div>
     <script src="https://unpkg.com/jquery"></script>
     <script src="https://unpkg.com/axios/dist/axios.js"></script>
     <script src="app.js"></script>
